@@ -27,14 +27,13 @@
     <form action="/tasks/{{ $task->id }}" method="post">
         @csrf
         @method('PATCH')
-        <input type="hidden" name="id" value="{{ $task->id }}">
         <label for="title">論文タイトル</label>
         <input type="text" name="title" value="{{ old('title', $task->title) }}">
         <label for="body">本文</label>
         <textarea name="body">{{ old('body', $task->body) }}</textarea>
         <br>
         <input type="submit" value="更新">
-        <button onclick="location.href='//localhost/tasks'">一覧へ戻る</button>
+        <button onclick="location.href='/tasks'">一覧へ戻る</button>
     </form>
 </body>
 

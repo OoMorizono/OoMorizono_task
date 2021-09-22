@@ -16,6 +16,7 @@
     <p>{{ $task->title }}</p>
     <br>
     <p>【内容】</p>
+    <p>{{ $task->body }}</p>
     <div class="button-group">
         <button onclick="location.href='//localhost/tasks'">一覧へ戻る</button>
         <button onclick="location.href='/tasks/{{ $task->id }}/edit'">編集する</button>

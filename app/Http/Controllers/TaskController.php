@@ -24,7 +24,6 @@ class TaskController extends Controller
     {
         $task = new Task();
 
-        $task->timestamps = false;
         $task->title = $request->title;
         $task->body = $request->body;
 
@@ -41,7 +40,6 @@ class TaskController extends Controller
     public function update(TaskRequest $request, $id)
     {
         $task = Task::find($id);
-        $task->timestamps = false;
         $task->title = $request->title;
         $task->body = $request->body;
 
